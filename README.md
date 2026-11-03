@@ -1,6 +1,21 @@
-# F1TENTH Adaptive Racing Control
+<h1 align="center">F1TENTH Adaptive Racing Control</h1>
 
-**LiDAR-based adaptive speed and steering control for F1TENTH autonomous racing using TinyLidarNet and ROS 2.**
+<p align="center">
+  LiDAR-based speed and steering control using TinyLidarNet, ROS 2, and NVIDIA Jetson
+</p>
+
+<p align="center">
+  <strong>🏅 8th Place · Encouragement Award</strong><br>
+  2025 The 4th F1TENTH Korea Championship · ICCAS 2025
+</p>
+
+<p align="center">
+  <img src="assets/competition-run.gif" alt="F1TENTH vehicle driving on the ICCAS 2025 competition course" width="640">
+</p>
+
+<p align="center">
+  <a href="assets/competition-run.mp4">Watch the full 17-second competition run</a>
+</p>
 
 ## Overview
 
@@ -8,41 +23,11 @@ This repository documents modifications to a TinyLidarNet-based inference node u
 
 **Scope:** This repository contains the modified inference-node source rather than a standalone, fully reproducible ROS 2 racing stack. The underlying packages and pretrained models are not included.
 
-## Competition Run
-
-**Result:** 🏅 8th Place · Encouragement Award<br>
-**Event:** 2025 The 4th F1TENTH Korea Championship · ICCAS 2025
+## Control Pipeline
 
 <p align="center">
-  <a href="assets/competition-run.mp4">
-    <img src="assets/competition-run.jpg" alt="F1TENTH vehicle driving on the autonomous driving competition course" width="100%">
-  </a>
+  <img src="assets/control-pipeline.svg" alt="F1TENTH adaptive racing control pipeline" width="100%">
 </p>
-
-The clip shows the vehicle operating on the autonomous driving competition course. It is provided as a qualitative demonstration rather than a performance benchmark.
-
-[Watch the 17-second competition run](assets/competition-run.mp4)
-
-## System Flow
-
-```text
-LiDAR (/scan)
-    │
-    ├── Forward distance estimate ──> Dynamic maximum speed
-    │
-    └── Scan preprocessing ──> TinyLidarNet inference
-                                   │
-                              Speed / steering
-                                   │
-                      ┌────────────┴────────────┐
-                      │                         │
-               Speed adjustment          Steering smoothing
-               + dynamic bounds          + speed-based limit
-                      │                         │
-                      └────────────┬────────────┘
-                                   ▼
-                         Ackermann command (/drive)
-```
 
 ## Implemented Control Logic
 
@@ -87,6 +72,10 @@ These are **code configuration values, not benchmark results**. The source inclu
 
 ```text
 .
+├── assets/
+│   ├── competition-run.gif
+│   ├── competition-run.mp4
+│   └── control-pipeline.svg
 ├── README.md
 └── src/
     └── inference_node.py

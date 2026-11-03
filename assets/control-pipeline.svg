@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="460" viewBox="0 0 1400 460" role="img" aria-labelledby="title desc">
+  <title id="title">F1TENTH adaptive racing control pipeline</title>
+  <desc id="desc">LiDAR input is preprocessed and passed through TinyLidarNet. Speed and steering outputs are adjusted separately and merged into an Ackermann drive command.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto">
+      <path d="M0 0L10 5L0 10Z" fill="#64748b"/>
+    </marker>
+  </defs>
+
+  <rect width="1400" height="460" fill="#ffffff"/>
+
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="36" y="43" fill="#111827" font-size="25" font-weight="700">F1TENTH Adaptive Racing Control Pipeline</text>
+
+    <g stroke-width="2">
+      <rect x="36" y="175" width="160" height="92" rx="8" fill="#f4f8fc" stroke="#7aa7cf"/>
+      <rect x="254" y="175" width="180" height="92" rx="8" fill="#f8fafc" stroke="#aab5c2"/>
+      <rect x="492" y="175" width="170" height="92" rx="8" fill="#f4f8fc" stroke="#7aa7cf"/>
+
+      <rect x="742" y="90" width="165" height="80" rx="8" fill="#fff8ef" stroke="#dba35c"/>
+      <rect x="965" y="90" width="220" height="80" rx="8" fill="#fff8ef" stroke="#dba35c"/>
+
+      <rect x="742" y="275" width="165" height="80" rx="8" fill="#f3faf7" stroke="#68a98a"/>
+      <rect x="965" y="275" width="220" height="80" rx="8" fill="#f3faf7" stroke="#68a98a"/>
+
+      <rect x="1242" y="175" width="130" height="92" rx="8" fill="#f4f8fc" stroke="#7aa7cf"/>
+    </g>
+
+    <g fill="none" stroke="#64748b" stroke-width="2.5" marker-end="url(#arrow)">
+      <path d="M196 221H238"/>
+      <path d="M434 221H476"/>
+      <path d="M662 221H697V130H726"/>
+      <path d="M662 221H697V315H726"/>
+      <path d="M907 130H949"/>
+      <path d="M907 315H949"/>
+      <path d="M1185 130H1208V205H1226"/>
+      <path d="M1185 315H1208V237H1226"/>
+    </g>
+
+    <g text-anchor="middle">
+      <text x="116" y="210" fill="#111827" font-size="20" font-weight="700">LiDAR</text>
+      <text x="116" y="239" fill="#64748b" font-size="17">/scan</text>
+
+      <text x="344" y="210" fill="#111827" font-size="19" font-weight="700">Preprocessing</text>
+      <text x="344" y="239" fill="#64748b" font-size="16">1080-point scan</text>
+
+      <text x="577" y="210" fill="#111827" font-size="20" font-weight="700">TinyLidarNet</text>
+      <text x="577" y="239" fill="#64748b" font-size="16">inference</text>
+
+      <text x="824" y="120" fill="#8a571e" font-size="18" font-weight="700">Speed Output</text>
+      <text x="824" y="146" fill="#8a6a45" font-size="15">prediction</text>
+
+      <text x="1075" y="120" fill="#8a571e" font-size="18" font-weight="700">Speed Adjustment</text>
+      <text x="1075" y="146" fill="#8a6a45" font-size="15">LiDAR bound · cornering</text>
+
+      <text x="824" y="305" fill="#2f7354" font-size="18" font-weight="700">Steering Output</text>
+      <text x="824" y="331" fill="#5c7f6e" font-size="15">prediction</text>
+
+      <text x="1075" y="305" fill="#2f7354" font-size="18" font-weight="700">Steering Adjustment</text>
+      <text x="1075" y="331" fill="#5c7f6e" font-size="15">EMA · speed-based limit</text>
+
+      <text x="1307" y="210" fill="#111827" font-size="18" font-weight="700">Ackermann</text>
+      <text x="1307" y="235" fill="#111827" font-size="18" font-weight="700">Drive</text>
+      <text x="1307" y="258" fill="#64748b" font-size="15">/drive</text>
+    </g>
+
+    <g font-size="15" font-weight="700">
+      <text x="687" y="112" fill="#c27b2d">speed</text>
+      <text x="680" y="343" fill="#438064">steering</text>
+    </g>
+  </g>
+</svg>
