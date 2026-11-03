@@ -10,6 +10,9 @@ This repository documents modifications to a TinyLidarNet-based inference node u
 
 ## Competition Run
 
+**Result:** 8th Place · Encouragement Award  
+**Event:** 2025 The 4th F1TENTH Korea Championship · ICCAS 2025
+
 <p align="center">
   <a href="assets/competition-run.mp4">
     <img src="assets/competition-run.jpg" alt="F1TENTH vehicle driving on the autonomous driving competition course" width="100%">
