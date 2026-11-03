@@ -10,7 +10,7 @@ This repository documents modifications to a TinyLidarNet-based inference node u
 
 ## Competition Run
 
-**Result:** 8th Place · Encouragement Award<br>
+**Result:** 🏅 8th Place · Encouragement Award<br>
 **Event:** 2025 The 4th F1TENTH Korea Championship · ICCAS 2025
 
 <p align="center">
