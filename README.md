@@ -8,6 +8,18 @@ This repository documents modifications to a TinyLidarNet-based inference node u
 
 **Scope:** This repository contains the modified inference-node source rather than a standalone, fully reproducible ROS 2 racing stack. The underlying packages and pretrained models are not included.
 
+## Competition Run
+
+<p align="center">
+  <a href="assets/competition-run.mp4">
+    <img src="assets/competition-run.jpg" alt="F1TENTH vehicle driving on the autonomous driving competition course" width="100%">
+  </a>
+</p>
+
+The clip shows the vehicle operating on the autonomous driving competition course. It is provided as a qualitative demonstration rather than a performance benchmark.
+
+[Watch the 17-second competition run](assets/competition-run.mp4)
+
 ## System Flow
 
 ```text
