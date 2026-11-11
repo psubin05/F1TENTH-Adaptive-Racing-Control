@@ -6,7 +6,7 @@
 
 <p align="center">
   <strong>🏅 8th Place · Encouragement Award</strong><br>
-  2025 The 4th F1TENTH Korea Championship · ICCAS 2025
+  <a href="https://2025.iccas.org/">2025 The 4th F1TENTH Korea Championship · ICCAS 2025</a>
 </p>
 
 <p align="center">
